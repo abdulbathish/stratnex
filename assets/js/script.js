@@ -168,9 +168,6 @@
 		const megaMenus = document.querySelectorAll('.mega-menu');
 		
 		megaMenus.forEach(megaMenu => {
-		  const isSubsidiariesMenu = megaMenu.querySelector('.full-width') !== null;
-		  
-		  if (!isSubsidiariesMenu) {
 			const menuItems = megaMenu.querySelectorAll('.menu-item');
 			const menuContents = megaMenu.querySelectorAll('.menu-content');
 	  
@@ -214,7 +211,6 @@
 				}
 			  });
 			});
-		  }
 		});
 	  
 		// Handle mega menu visibility
@@ -225,9 +221,6 @@
 			const currentMegaMenu = this.querySelector('.mega-menu');
 			
 			if (currentMegaMenu) {
-			  const isSubsidiariesMenu = currentMegaMenu.querySelector('.full-width') !== null;
-			  
-			  if (!isSubsidiariesMenu) {
 				const items = currentMegaMenu.querySelectorAll('.menu-item');
 				const contents = currentMegaMenu.querySelectorAll('.menu-content');
 				
@@ -243,12 +236,6 @@
 					firstContent.classList.add('active');
 				  }
 				}
-			  } else {
-				const subsidiariesContent = currentMegaMenu.querySelector('.menu-content');
-				if (subsidiariesContent) {
-				  subsidiariesContent.classList.add('active');
-				}
-			  }
 			}
 		  });
 		});
@@ -312,7 +299,7 @@
                 const sectionId = leftItem.getAttribute('data-section');
                 const sectionTitle = leftItem.textContent.trim();
                 const sectionContent = dropdownContent.querySelector(`#${sectionId}`);
-                const grid = sectionContent ? (sectionContent.querySelector('.menu-grid') || sectionContent.querySelector('.subsidiaries-grid')) : null;
+                const grid = sectionContent ? sectionContent.querySelector('.menu-grid') : null;
                 if (grid) {
                     subItemsMarkup += `
                         <li class="mobile-nav-item">
@@ -407,8 +394,7 @@
         // Handle other dropdown menus
         else if (hasDropdown) {
             const dropdownContent = item.querySelector('.mega-menu');
-            const menuGrid = dropdownContent.querySelector('.menu-grid') || 
-                           dropdownContent.querySelector('.subsidiaries-grid');
+            const menuGrid = dropdownContent.querySelector('.menu-grid');
             
             if (menuGrid) {
                 mobileItem.innerHTML = `

@@ -1,4 +1,4 @@
-/* InfyStrat Software Services  */
+/* StratNex Software Services  */
 
 /************ TABLE OF CONTENTS ***************
 1. Fonts
@@ -638,7 +638,7 @@
 .services-one{
 	position: relative;
 	z-index: 1;
-	padding: 10px 0px 70px;
+	padding: 80px 0px 100px;
 }
 
 .services-one.style-two{
@@ -657,11 +657,14 @@
     display: flex;
     flex-direction: column;
 	position: relative;
-	padding: 30px 30px;
+	padding: 35px 35px;
 	overflow: hidden;
-	border-radius: 8px;
+	border-radius: 16px;
 	background: rgba(var(--white-color-rgb), 0.10);
     background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.10) 0%, var(--color-two) 100%);
+	border: 1px solid rgba(var(--white-color-rgb), 0.08);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-block_one-inner::before{
@@ -672,7 +675,7 @@
 	right: 1px;
 	bottom: 1px;
 	overflow: hidden;
-	border-radius: 8px;
+	border-radius: 16px;
 	background: rgba(var(--color-seven-rgb), 1);
     background: linear-gradient(to bottom, rgba(var(--color-seven-rgb), 1) 0%, rgba(var(--white-color-rgb), 0) 100%);
 }
@@ -707,6 +710,12 @@
 	border-radius: 50px;
     background: var(--main-color);
     background: linear-gradient(to right, var(--main-color) 0%, var(--color-five) 100%)
+}
+
+.service-block_one-inner:hover{
+	transform: translateY(-8px);
+	box-shadow: 0 12px 40px rgba(var(--main-color-rgb), 0.25);
+	border-color: rgba(var(--main-color-rgb), 0.3);
 }
 
 .service-block_one-inner:hover .service-block_one-icon{
@@ -838,11 +847,11 @@
 
 .about-one{
 	position: relative;
-	padding: 100px 0px 70px;
+	padding: 120px 0px 100px;
 }
 
 .about-one .sec-title_title{
-	color: #D093E8;
+	color: #60A5FA;
 }
 
 .about-one_icon{
@@ -935,7 +944,7 @@
 
 .about-one_rating{
 	position: relative;
-	color: #FCCA18;
+	color: #3B82F6;
 	font-size: 14px;
 }
 
@@ -1295,7 +1304,7 @@
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	border:1px solid rgba(var(--black-color-rgb), 0.10);
-	background-color: #e4d5e4;
+	background-color: #DBEAFE;
 }
 
 .answer-search_box .form-group input::placeholder,
@@ -1340,10 +1349,11 @@
 
 .testimonial-one{
 	position: relative;
+	padding: 100px 0px;
 }
 
 .testimonial-one .sec-title_title {
-    color: #D093E8;
+    color: #60A5FA;
 }
 
 .testimonial-one .auto-container{
@@ -1368,14 +1378,17 @@
 
 .testimonial-block_one-inner{
 	position: relative;
-	padding: 40px 30px;
+	padding: 40px 35px;
 	overflow: hidden;
-	border-radius: 8px;
+	border-radius: 16px;
 	background: rgba(var(--white-color-rgb), 0.05);
     background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.05) 0%, var(--color-seven) 100%);
 	height: 100%; /* Ensure full height of the slide */
 	display: flex;
     flex-direction: column;
+	border: 1px solid rgba(var(--white-color-rgb), 0.08);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .testimonial-block_one-inner::before{
@@ -1385,13 +1398,19 @@
 	top: 1px;
 	right: 1px;
 	bottom: 1px;
-	border-radius: 8px;
+	border-radius: 16px;
 	background-color: var(--color-seven);
+}
+
+.testimonial-block_one:hover .testimonial-block_one-inner{
+	transform: translateY(-8px);
+	box-shadow: 0 12px 40px rgba(var(--main-color-rgb), 0.2);
+	border-color: rgba(var(--main-color-rgb), 0.3);
 }
 
 .testimonial-block_one-rating{
 	position: relative;
-	color: #FCCA18;
+	color: #3B82F6;
     font-size: 14px;
 }
 
@@ -1465,7 +1484,7 @@
 }
 .three-item_carousel {
     position: relative;
-	color: #e4d5e4;
+	color: #DBEAFE;
 }
 .three-item_carousel .swiper-wrapper {
     align-items: stretch; /* Stretch slides to same height */
@@ -2051,7 +2070,7 @@
 }
 
 .faq-one .sec-title_title{
-	color: #D093E8;
+	color: #60A5FA;
 }
 
 .faq-one .sec-title_text{
@@ -2233,7 +2252,7 @@
 }
 
 .social-one .sec-title_title{
-	color: #D093E8;
+	color: #60A5FA;
 }
 
 .social-one .sec-title{
@@ -2344,7 +2363,7 @@
 }
 
 .news-one .sec-title_title{
-	color: #D093E8;
+	color: #60A5FA;
 }
 
 .news-one.style-two{
@@ -2566,9 +2585,10 @@
 	top: 40px;
 	right: 0px;
 	bottom: 0px;
-	border-radius: 16px;
+	border-radius: 20px;
     background: var(--main-color);
     background: linear-gradient(to bottom, var(--main-color) 0%, var(--color-five) 100%);
+	box-shadow: 0 10px 40px rgba(var(--main-color-rgb), 0.3);
 }
 
 .cta-one_title-column{
@@ -3726,7 +3746,7 @@
 
 .testimonial-block_two-rating{
 	position: relative;
-	color: #FCCA18;
+	color: #3B82F6;
     font-size: 14px;
 }
 
@@ -5457,7 +5477,7 @@
 }
 
 .story-one .sec-title_title{
-	color: #D093E8;
+	color: #60A5FA;
 	padding: 0px;
 	background: none;
 }
@@ -8230,7 +8250,7 @@
 }
 
 .footer-logo img {
-  max-width: 120px;
+  max-width: 180px;
   height: auto;
   display: block;
   margin: 0 auto;

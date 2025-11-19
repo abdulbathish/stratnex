@@ -1,1 +1,1 @@
-# infystrat
+# StratNex
