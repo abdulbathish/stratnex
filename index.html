@@ -20,7 +20,136 @@
 			background: none !important;
 		}
 
-		/* Make all counter cards equal height - moved to assets/css/style.css */
+		/* Subtle design enhancements */
+		.service-block_one-inner {
+			transition: all 0.4s ease;
+			border-radius: 8px;
+		}
+
+		.service-block_one-inner:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		}
+
+		.service-block_one-icon {
+			transition: all 0.3s ease;
+		}
+
+		.service-block_one-inner:hover .service-block_one-icon {
+			transform: scale(1.1);
+		}
+
+		.counter-block_one-inner {
+			transition: all 0.3s ease;
+			border-radius: 8px;
+		}
+
+		.counter-block_one-inner:hover {
+			transform: translateY(-5px);
+			background: rgba(255, 255, 255, 0.05);
+		}
+
+		.sec-title_heading span {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.slider-one_button .template-btn {
+			transition: all 0.3s ease;
+		}
+
+		.slider-one_button .template-btn:hover {
+			transform: translateX(5px);
+		}
+
+		.service-block_one-join {
+			position: relative;
+			transition: all 0.3s ease;
+		}
+
+		.service-block_one-join:after {
+			content: '→';
+			margin-left: 5px;
+			transition: margin-left 0.3s ease;
+		}
+
+		.service-block_one-join:hover:after {
+			margin-left: 10px;
+		}
+
+		.footer-pages_list li a {
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+
+		.footer-pages_list li a:hover {
+			transform: translateX(5px);
+			color: #667eea;
+		}
+
+		.main-slider-prev,
+		.main-slider-next {
+			transition: all 0.3s ease;
+		}
+
+		.main-slider-prev:hover,
+		.main-slider-next:hover {
+			transform: scale(1.1);
+		}
+
+		.service-block_two-inner {
+			transition: all 0.4s ease;
+			border-radius: 8px;
+		}
+
+		.service-block_two-inner:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Smooth scroll behavior */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Improve button accessibility */
+		.main-slider-toggle {
+			transition: all 0.3s ease;
+		}
+
+		.main-slider-toggle:hover {
+			transform: scale(1.1);
+			background: rgba(102, 126, 234, 0.1);
+		}
+
+		/* Enhanced counter animation trigger */
+		.counter-block_one-count {
+			font-weight: 700;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		/* Subtle image hover effect */
+		.slider-one_image img {
+			transition: all 0.5s ease;
+		}
+
+		.slider-one_image:hover img {
+			transform: scale(1.05);
+		}
+
+		/* Footer social icons enhancement */
+		.footer-social_box a {
+			transition: all 0.3s ease;
+		}
+
+		.footer-social_box a:hover {
+			transform: translateY(-3px) scale(1.1);
+		}
 	</style>
 
 	<link
@@ -212,7 +341,7 @@
 			<div class="main-slider swiper-container">
 				<div class="swiper-wrapper">
 
-					<!-- Slide one -->
+					<!-- Slide 1: AI-Based -->
 					<div class="swiper-slide">
 						<div class="slider-one_pattern"
 							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
@@ -228,17 +357,16 @@
 										<div class="slider-one_title">Artificial Intelligence (AI)</div>
 										<h1 class="slider-one_heading">Where Innovation
 											<span>Meets Action</span>
-											<!-- That Transform Business -->
 										</h1>
 										<div class="slider-one_text">At StratNex, our cutting-edge AI solutions empower organizations of every size and industry to move from ideas to real-world impact—faster, 
 											smarter, and with complete confidence. We turn complex challenges into seamless, 
 											scalable innovations that drive growth, efficiency, and future-ready transformation.</div>
 										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="application-development-and-maintenance.html"
+											<a href="AI-bussiness-intelligence.html"
 												class="template-btn btn-style-one">
 												<span class="btn-wrap">
-													<span class="text-one">Explore Our Products</span>
-													<span class="text-two">Explore Our Products</span>
+													<span class="text-one">Explore AI Solutions</span>
+													<span class="text-two">Explore AI Solutions</span>
 												</span>
 											</a>
 											<button class="main-slider-toggle" aria-label="Pause slider"
@@ -255,7 +383,7 @@
 										</div>
 										<div class="slider-one_image">
 											<img src="assets/images/main-slider/GSI.png"
-												alt="Global System Integration" />
+												alt="AI Solutions" />
 										</div>
 									</div>
 								</div>
@@ -263,7 +391,7 @@
 						</div>
 					</div>
 
-					<!-- Slide two -->
+					<!-- Slide 2: Global Capability Centre -->
 					<div class="swiper-slide">
 						<div class="slider-one_pattern"
 							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
@@ -276,17 +404,16 @@
 								<!-- Content Column -->
 								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
 									<div class="slider-one_content-inner">
-										<div class="slider-one_title">AI in a Box</div>
-										<h1 class="slider-one_heading">Redefining Abundance with Innovation - <span>Do More with Less</span></h1>
-										<div class="slider-one_text">Unlock advanced intelligence for your business—without the complexity. 
-											StratNex AI in the Box delivers cutting-edge, quantum-ready security and instant insights. 
-											Just plug, play, and transform your operations in minutes.</div>
+										<div class="slider-one_title">Global Capability Centre</div>
+										<h1 class="slider-one_heading">Empowering Growth Through Strategic <span>Global Capability Centre Partnership</span>
+										</h1>
+										<div class="slider-one_text">StratNex establishes world-class Global Capability Centres that drive innovation, operational excellence, and digital transformation. Our GCC solutions deliver strategic value through enhanced efficiency, cost optimization, and access to global talent pools.</div>
 										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="application-development-and-maintenance.html"
+											<a href="gcc.html"
 												class="template-btn btn-style-one">
 												<span class="btn-wrap">
-													<span class="text-one">Explore Our Products</span>
-													<span class="text-two">Explore Our Products</span>
+													<span class="text-one">Discover GCC Solutions</span>
+													<span class="text-two">Discover GCC Solutions</span>
 												</span>
 											</a>
 											<button class="main-slider-toggle" aria-label="Pause slider"
@@ -298,13 +425,14 @@
 								</div>
 								<!-- Image Column -->
 								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
+									<div class="slider-one_pattern-three"
+										style="background-image:url(assets/images/main-slider/pattern-3.png)"></div>
 									<div class="slider-one_image-outer">
 										<div class="slider-one_graph">
-											<!-- Graph element can be replaced with a relevant GCC visualization -->
 										</div>
 										<div class="slider-one_image">
 											<img src="assets/images/main-slider/GCC.png"
-												alt="Global Capacity Centre Network" />
+												alt="Global Capability Centre" />
 										</div>
 									</div>
 								</div>
@@ -312,8 +440,7 @@
 						</div>
 					</div>
 
-
-					<!-- Slide three -->
+					<!-- Slide 3: Government Services -->
 					<div class="swiper-slide">
 						<div class="slider-one_pattern"
 							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
@@ -326,196 +453,61 @@
 								<!-- Content Column -->
 								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
 									<div class="slider-one_content-inner">
-										<div class="slider-one_title">Cybersecurity</div>
+										<div class="slider-one_title">Government Services</div>
+										<h1 class="slider-one_heading">Transforming Public Services
+											<span>For Better Tomorrow</span>
+										</h1>
+										<div class="slider-one_text">StratNex delivers innovative digital solutions for government and public sector organizations. Our comprehensive platforms enhance citizen services, streamline operations, and drive digital transformation across public service delivery.</div>
+										<div class="slider-one_button d-flex align-items-center flex-wrap">
+											<a href="public-services.html" class="template-btn btn-style-one">
+												<span class="btn-wrap">
+													<span class="text-one">Explore Public Services</span>
+													<span class="text-two">Explore Public Services</span>
+												</span>
+											</a>
+											<button class="main-slider-toggle" aria-label="Pause slider"
+												title="Pause slider">
+												<i class="fas fa-pause"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- Image Column -->
+								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
+									<div class="slider-one_image-outer">
+										<div class="slider-one_graph">
+										</div>
+										<div class="slider-one_image">
+											<img src="assets/images/main-slider/88275252fbca58896e74c1afc4e2646b.png" alt="Government Services" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 4: Cloud & Cybersecurity -->
+					<div class="swiper-slide">
+						<div class="slider-one_pattern"
+							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
+						<div class="slider-one_pattern-two"
+							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
+						<div class="slider-one_pattern-four"
+							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
+						<div class="auto-container">
+							<div class="row clearfix">
+								<!-- Content Column -->
+								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
+									<div class="slider-one_content-inner">
+										<div class="slider-one_title">Cloud & Cybersecurity</div>
 										<h1 class="slider-one_heading">Protect. Prevent. Prosper - <span>With StratNex</span>
-											<!-- That Learn and Adapt -->
 										</h1>
-										<div class="slider-one_text">At StratNex, we develop AI-powered applications
-											that transform business operations. Our intelligent solutions leverage
-											machine learning, natural language processing, and advanced analytics to
-											create applications that adapt, learn, and deliver unprecedented value.
-										</div>
-										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="AI-bussiness-intelligence.html" class="template-btn btn-style-one">
-												<span class="btn-wrap">
-													<span class="text-one">Discover Our Products</span>
-													<span class="text-two">Discover Our Products</span>
-												</span>
-											</a>
-											<button class="main-slider-toggle" aria-label="Pause slider"
-												title="Pause slider">
-												<i class="fas fa-pause"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-								<!-- Image Column -->
-								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-									<div class="slider-one_image-outer">
-										<!-- Slider One Author -->
-										<div class="slider-one_graph">
-											<!-- <lottie-player
-													src="https://lottie.host/0b8ad8bd-530f-4f23-b4f7-26c801964183/d4aawWPLzp.json"
-													background="transparent" style="width: 150px; height: 150px;" loop
-													autoplay></lottie-player> -->
-
-										</div>
-
-										<div class="slider-one_image">
-											<img src="assets/images/main-slider/a (8).png" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-
-
-
-					<!-- slide 3 -->
-
-					<div class="swiper-slide">
-
-						<div class="slider-one_pattern"
-							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
-						<div class="slider-one_pattern-two"
-							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
-						<div class="slider-one_pattern-four"
-							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
-						<div class="auto-container">
-							<div class="row clearfix">
-								<!-- Content Column -->
-								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
-									<div class="slider-one_content-inner">
-										<div class="slider-one_title">Data Analytics</div>
-										<h1 class="slider-one_heading">Discover the Edge -
-											<span>Collaborate. Ignite. Leap.</span>
-										</h1>
-										<div class="slider-one_text">Unlock your data’s true potential with StratNex—where advanced data analytics transforms raw numbers into growth, 
-											innovation, and security. We empower businesses of every size to make smarter decisions, optimize performance, 
-											and stay ahead in today’s rapidly changing digital landscape.</div>
-										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="application-development-and-maintenance.html"
-												class="template-btn btn-style-one">
-												<span class="btn-wrap">
-													<span class="text-one">View Product</span>
-													<span class="text-two">View Product</span>
-												</span>
-											</a>
-											<button class="main-slider-toggle" aria-label="Pause slider"
-												title="Pause slider">
-												<i class="fas fa-pause"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<!-- Image Column -->
-								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-
-									<div class="slider-one_image-outer">
-
-										<div class="slider-one_graph">
-										</div>
-										<div class="slider-one_image">
-											<img src="assets/images/main-slider/slide-3.png" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-
-
-						</div>
-					</div>
-
-					<!-- Slide 5 -->
-					<div class="swiper-slide">
-						<div class="slider-one_pattern"
-							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
-						<div class="slider-one_pattern-two"
-							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
-						<div class="slider-one_pattern-four"
-							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
-						<div class="auto-container">
-							<div class="row clearfix">
-								<!-- Content Column -->
-								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
-									<div class="slider-one_content-inner">
-										<div class="slider-one_title">Global Capability Centre </div>
-										<h1 class="slider-one_heading">Empowering Growth Through Strategic <span>Global capability centre Partnership</span>
-										</h1>
-										<div class="slider-one_text">StratNex develops innovative financial applications
-											that revolutionize banking and financial services. Our solutions deliver
-											secure, scalable, and user-centric applications that enhance efficiency,
-											security, and customer experience across the financial sector.</div>
-										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="banking-financial-services.html"
-												class="template-btn btn-style-one">
-												<span class="btn-wrap">
-													<span class="text-one">View Product</span>
-													<span class="text-two">View Product</span>
-												</span>
-											</a>
-											<button class="main-slider-toggle" aria-label="Pause slider"
-												title="Pause slider">
-												<i class="fas fa-pause"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<!-- Image Column -->
-								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-									<div class="slider-one_pattern-three"
-										style="background-image:url(assets/images/main-slider/pattern-3.png)"></div>
-									<div class="slider-one_image-outer">
-
-										<div class="slider-one_graph">
-											<!-- <lottie-player
-																		src="https://lottie.host/56a8e970-88f9-48da-9cfc-a921d2ebbb6f/qhV18EWxqJ.json"
-																		background="transparent" speed="1" style="width: 200px; height: 200px;"
-																		loop autoplay></lottie-player> -->
-										</div>
-										<div class="slider-one_image">
-											<img src="assets/images/main-slider/88275252fbca58896e74c1afc4e2646b.png"
-												alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-
-					<!-- Slide 2 -->
-					<div class="swiper-slide">
-						<div class="slider-one_pattern"
-							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
-						<div class="slider-one_pattern-two"
-							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
-						<div class="slider-one_pattern-four"
-							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
-						<div class="auto-container">
-							<div class="row clearfix">
-								<!-- Content Column -->
-								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
-									<div class="slider-one_content-inner">
-										<div class="slider-one_title">Secure Application Development</div>
-										<h1 class="slider-one_heading">Building Secure Applications with <span>Advanced
-												Security Solutions</span></h1>
-										<div class="slider-one_text">StratNex develops secure applications with built-in
-											cybersecurity features. Our security-first approach ensures applications are
-											protected from threats while maintaining performance, compliance, and
-											seamless user experience.</div>
+										<div class="slider-one_text">StratNex delivers comprehensive cloud solutions and advanced cybersecurity services that protect your digital assets while enabling scalable, secure operations. Our integrated approach ensures your business stays protected, compliant, and future-ready.</div>
 										<div class="slider-one_button d-flex align-items-center flex-wrap">
 											<a href="cyber-security.html" class="template-btn btn-style-one">
 												<span class="btn-wrap">
-													<span class="text-one">View Product</span>
-													<span class="text-two">View Product</span>
+													<span class="text-one">Discover Security Solutions</span>
+													<span class="text-two">Discover Security Solutions</span>
 												</span>
 											</a>
 											<button class="main-slider-toggle" aria-label="Pause slider"
@@ -525,141 +517,19 @@
 										</div>
 									</div>
 								</div>
-
 								<!-- Image Column -->
 								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-
 									<div class="slider-one_image-outer">
-
 										<div class="slider-one_graph">
 										</div>
 										<div class="slider-one_image">
-											<img src="assets/images/main-slider/slide-2.png" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-
-						</div>
-					</div>
-
-
-					<div class="swiper-slide">
-						<div class="slider-one_pattern"
-							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
-						<div class="slider-one_pattern-two"
-							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
-						<div class="slider-one_pattern-four"
-							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
-						<div class="auto-container">
-							<div class="row clearfix">
-								<!-- Content Column -->
-								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
-									<div class="slider-one_content-inner">
-										<div class="slider-one_title">Advancing Telecommunications Technology</div>
-										<h1 class="slider-one_heading">Empowering Communities with
-											<span>Next-Gen Telecom Solutions</span>
-										</h1>
-										<div class="slider-one_text">StratNex delivers innovative telecommunications
-											solutions that
-											enhance network performance, enable digital transformation, and create
-											seamless
-											connectivity experiences for service providers and their customers.</div>
-										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="telecommunications.html" class="template-btn btn-style-one">
-												<span class="btn-wrap">
-													<span class="text-one">View Product</span>
-													<span class="text-two">View Product</span>
-												</span>
-											</a>
-											<button class="main-slider-toggle" aria-label="Pause slider"
-												title="Pause slider">
-												<i class="fas fa-pause"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<!-- Image Column -->
-								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-									<div class="slider-one_pattern-three"
-										style="background-image:url(assets/images/main-slider/pattern-3.png)"></div>
-									<div class="slider-one_image-outer">
-										<div class="slider-one_graph">
-											<!-- <lottie-player
-													src="https://lottie.host/56a8e970-88f9-48da-9cfc-a921d2ebbb6f/qhV18EWxqJ.json"
-													background="transparent" speed="1" style="width: 200px; height: 200px;"
-													loop autoplay></lottie-player> -->
-										</div>
-										<div class="slider-one_image">
-											<img src="assets/images/main-slider/slide-4.png" alt="" />
+											<img src="assets/images/main-slider/a (8).png" alt="Cloud & Cybersecurity" />
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- Slide-5 -->
-					<div class="swiper-slide">
-						<div class="slider-one_pattern"
-							style="background-image:url(assets/images/main-slider/pattern-1.png)"></div>
-						<div class="slider-one_pattern-two"
-							style="background-image:url(assets/images/main-slider/pattern-2.png)"></div>
-						<div class="slider-one_pattern-four"
-							style="background-image:url(assets/images/main-slider/pattern-4.png)"></div>
-						<div class="auto-container">
-							<div class="row clearfix">
-								<!-- Content Column -->
-								<div class="slider-one_content col-lg-7 col-md-12 col-sm-12">
-									<div class="slider-one_content-inner">
-										<div class="slider-one_title"><i><img src="assets/images/main-slider/iotn.png"
-													alt="" /></i> Connecting the Future with IoT</div>
-										<h1 class="slider-one_heading">Revolutionize Your World with <span>Smart
-												IoT</span> Solutions</h1>
-										<div class="slider-one_text">At StratNex, we develop innovative IoT applications
-											that connect devices, collect data, and drive intelligent automation. Our
-											cutting-edge IoT products enhance connectivity, improve efficiency, and
-											drive innovation across various industries.</div>
-										<div class="slider-one_button d-flex align-items-center flex-wrap">
-											<a href="product&platforms.html" class="template-btn btn-style-one">
-												<span class="btn-wrap">
-													<span class="text-one">View Product</span>
-													<span class="text-two">View Product</span>
-												</span>
-											</a>
-											<button class="main-slider-toggle" aria-label="Pause slider"
-												title="Pause slider">
-												<i class="fas fa-pause"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<!-- Image Column -->
-								<div class="slider-one_image-column col-lg-5 col-md-12 col-sm-12">
-									<div class="slider-one_image-outer">
-
-										<div class="slider-one_graph">
-											<!-- <lottie-player src="https://lottie.host/14a59de1-8cdb-4d76-978a-fc01fe711a10/QAWnwTmVF5.json" background="transparent"  speed="1" style="width: 300px; height: 300px;"  loop autoplay></lottie-player> -->
-
-										</div>
-										<div class="slider-one_image">
-											<!-- <lottie-player src="https://lottie.host/14a59de1-8cdb-4d76-978a-fc01fe711a10/QAWnwTmVF5.json" background="transparent"  speed="1" style="width: 300px; height: 600px;"  loop autoplay></lottie-player> -->
-											<img src="assets/images/main-slider/iot (2).png" alt="" />
-
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-
-
-
 
 
 				</div>
@@ -681,6 +551,9 @@
 					<h2 class="sec-title_heading">Innovative Products & Applications <br> <span>That Drive Digital
 							Transformation</span>
 					</h2>
+					<p style="max-width: 800px; margin: 15px auto 0; font-size: 17px; color: #666; line-height: 1.6;">
+						Empowering businesses with cutting-edge technology solutions that deliver measurable results and drive sustainable growth.
+					</p>
 				</div>
 				<div class="row clearfix">
 
@@ -817,50 +690,53 @@
 						<div class="sec-title_title">Innovation & Excellence</div>
 						<h2 class="sec-title_heading">Innovative Products & Solutions <br> <span>That Transform
 								Businesses</span></h2>
+						<p style="max-width: 800px; margin: 15px auto 0; font-size: 17px; color: rgba(255, 255, 255, 0.9); line-height: 1.6;">
+							Trusted by leading organizations worldwide. Our track record speaks for itself with proven results across industries.
+						</p>
 					</div>
 					<div class="row clearfix">
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-smile fa-fw"></div>
-								<div class="counter-block_one-count">150<i>+</i></div>
-								<div class="counter-block_one-text">Happy Customers Worldwide</div>
-							</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-smile fa-fw"></div>
+							<div class="counter-block_one-count">150<i>+</i></div>
+							<div class="counter-block_one-text">Happy Customers Worldwide</div>
 						</div>
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-users fa-fw"></div>
-								<div class="counter-block_one-count">1400<i>+</i></div>
-								<div class="counter-block_one-text">IT Professionals Worldwide</div>
-							</div>
+					</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-users fa-fw"></div>
+							<div class="counter-block_one-count">1400<i>+</i></div>
+							<div class="counter-block_one-text">IT Professionals Worldwide</div>
 						</div>
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-award fa-fw"></div>
-								<div class="counter-block_one-count">33<i>+</i></div>
-								<div class="counter-block_one-text">Years Industry Experience</div>
-							</div>
+					</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-award fa-fw"></div>
+							<div class="counter-block_one-count">33<i>+</i></div>
+							<div class="counter-block_one-text">Years Industry Experience</div>
 						</div>
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-industry fa-fw"></div>
-								<div class="counter-block_one-count">15<i>+</i></div>
-								<div class="counter-block_one-text">Industries Served</div>
-							</div>
+					</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-industry fa-fw"></div>
+							<div class="counter-block_one-count">15<i>+</i></div>
+							<div class="counter-block_one-text">Industries Served</div>
 						</div>
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-percent fa-fw"></div>
-								<div class="counter-block_one-count">95<i>%</i></div>
-								<div class="counter-block_one-text">Customer Retention</div>
-							</div>
+					</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-percent fa-fw"></div>
+							<div class="counter-block_one-count">95<i>%</i></div>
+							<div class="counter-block_one-text">Customer Retention</div>
 						</div>
-						<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
-							<div class="counter-block_one-inner">
-								<div class="counter-block_one-icon fa-solid fa-certificate fa-fw"></div>
-								<div class="counter-block_one-count">92<i>%</i></div>
-								<div class="counter-block_one-text">Certified Professionals</div>
-							</div>
+					</div>
+					<div class="counter-block_one col-lg-4 col-md-6 col-sm-12">
+						<div class="counter-block_one-inner wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms">
+							<div class="counter-block_one-icon fa-solid fa-certificate fa-fw"></div>
+							<div class="counter-block_one-count">92<i>%</i></div>
+							<div class="counter-block_one-text">Certified Professionals</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>

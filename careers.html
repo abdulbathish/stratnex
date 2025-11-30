@@ -19,6 +19,178 @@
 	<link rel="icon" href="assets/images/logo.png" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<style>
+		/* Careers Page Styling */
+		
+		/* Fix spacing issue - reduce padding throughout */
+		.page-title {
+			padding: 100px 0px 80px !important;
+		}
+
+		.story-one {
+			padding: 60px 0px 70px;
+		}
+
+		.story-one_content-outer {
+			padding-top: 0px;
+			padding-left: 50px;
+		}
+
+		.careers-icon-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+			padding: 20px;
+		}
+
+		.career-icon-box {
+			text-align: center;
+			transition: all 0.3s ease;
+		}
+
+		.career-icon-box:hover {
+			transform: translateY(-10px);
+		}
+
+		.career-icon-wrapper {
+			width: 110px;
+			height: 110px;
+			margin: 0 auto 15px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20px;
+			background: rgba(var(--white-color-rgb), 0.10);
+			background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.10) 0%, var(--color-two) 100%);
+			border: 1px solid rgba(var(--white-color-rgb), 0.08);
+			position: relative;
+			overflow: hidden;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		.career-icon-wrapper::before {
+			position: absolute;
+			content: '';
+			left: 1px;
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			overflow: hidden;
+			border-radius: 20px;
+			background: rgba(var(--color-seven-rgb), 1);
+			background: linear-gradient(to bottom, rgba(var(--color-seven-rgb), 1) 0%, rgba(var(--white-color-rgb), 0) 100%);
+		}
+
+		.career-icon-wrapper i {
+			font-size: 45px;
+			color: var(--main-color);
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+
+		.career-icon-box:hover .career-icon-wrapper {
+			transform: scale(1.1);
+			box-shadow: 0 12px 40px rgba(var(--main-color-rgb), 0.25);
+			border-color: rgba(var(--main-color-rgb), 0.3);
+		}
+
+		.career-icon-box:hover .career-icon-wrapper i {
+			color: var(--white-color);
+			transform: scale(1.2);
+		}
+
+		.career-icon-box h6 {
+			color: var(--white-color);
+			font-size: 16px;
+			font-weight: 600;
+			margin: 0;
+		}
+
+		/* Social Links Styling */
+		.social-links-container {
+			padding: 40px 0;
+		}
+
+		.social-link {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 50px;
+			border-radius: 20px;
+			background: rgba(var(--white-color-rgb), 0.10);
+			background: linear-gradient(to bottom, rgba(var(--white-color-rgb), 0.10) 0%, var(--color-two) 100%);
+			border: 1px solid rgba(var(--white-color-rgb), 0.08);
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			text-decoration: none;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.social-link::before {
+			position: absolute;
+			content: '';
+			left: 1px;
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			overflow: hidden;
+			border-radius: 20px;
+			background: rgba(var(--color-seven-rgb), 1);
+			background: linear-gradient(to bottom, rgba(var(--color-seven-rgb), 1) 0%, rgba(var(--white-color-rgb), 0) 100%);
+		}
+
+		.social-link i {
+			color: var(--main-color);
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+
+		.social-link p {
+			color: var(--white-color);
+			font-size: 18px;
+			font-weight: 600;
+			margin: 0;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+
+		.social-link:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 12px 40px rgba(var(--main-color-rgb), 0.25);
+			border-color: rgba(var(--main-color-rgb), 0.3);
+		}
+
+		.social-link:hover i,
+		.social-link:hover p {
+			color: var(--white-color);
+		}
+
+		@media (max-width: 768px) {
+			.careers-icon-grid {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+
+			.career-icon-wrapper {
+				width: 90px;
+				height: 90px;
+			}
+
+			.career-icon-wrapper i {
+				font-size: 36px;
+			}
+
+			.social-link {
+				padding: 30px;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -206,14 +378,6 @@
 		<section class="story-one">
 			<div class="auto-container">
 				<div class="row clearfix">
-					<div class="story-one_image-column col-lg-6 col-md-12 col-sm-12">
-						<div class="story-one_image-outer">
-							<div class="story-one_image">
-								<img src="assets/images/resource/careers.jpg" alt="Career at StratNex" />
-							</div>
-						</div>
-					</div>
-
 					<div class="story-one_content-column col-lg-6 col-md-12 col-sm-12">
 						<div class="story-one_content-outer">
 							<div class="sec-title style-four">
@@ -236,26 +400,103 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="story-one_image-column col-lg-6 col-md-12 col-sm-12">
+						<div class="story-one_image-outer">
+							<div class="careers-icon-grid">
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-laptop-code"></i>
+									</div>
+									<h6>Innovation</h6>
+								</div>
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-users"></i>
+									</div>
+									<h6>Collaboration</h6>
+								</div>
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-graduation-cap"></i>
+									</div>
+									<h6>Learning</h6>
+								</div>
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-chart-line"></i>
+									</div>
+									<h6>Growth</h6>
+								</div>
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-handshake"></i>
+									</div>
+									<h6>Team Spirit</h6>
+								</div>
+								<div class="career-icon-box">
+									<div class="career-icon-wrapper">
+										<i class="fa-solid fa-trophy"></i>
+									</div>
+									<h6>Excellence</h6>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Current Openings Section -->
-		<section class="contact-info" id="job-openings">
+		<!-- Benefits Section -->
+		<section class="value-one">
 			<div class="auto-container">
+				<!-- Sec Title -->
 				<div class="sec-title style-four centered">
-					<div class="sec-title_title">Connect With Us</div>
-					<h2 class="sec-title_heading">Find Us On <span>Social Media</span></h2>
+					<div class="sec-title_title">Why Work With Us</div>
+					<h2 class="sec-title_heading">Benefits & <span>Perks</span></h2>
 				</div>
-				<div class="row clearfix justify-content-center">
-					<div class="col-lg-8 col-md-10 col-sm-12">
-						<div class="social-links-container text-center">
-							<a href="https://www.linkedin.com/company/stratnex-software-services/jobs/?viewAsMember=true"
-								target="_blank" class="social-link">
-								<i class="fa-brands fa-linkedin fa-3x"></i>
-								<p>View Job Openings on LinkedIn</p>
-							</a>
+				<div class="row clearfix">
+					<!-- Value Block One -->
+					<div class="value-block_one active col-lg-3 col-md-6 col-sm-12">
+						<div class="value-block_one-inner">
+							<div class="value-block_one-icon">
+								<i class="fa-solid fa-money-bill-wave"></i>
+							</div>
+							<h5 class="value-block_one-title">Competitive Salary</h5>
+							<div class="value-block_one-text">Industry-leading compensation packages with performance bonuses and regular reviews.</div>
+						</div>
+					</div>
 
+					<!-- Value Block Two -->
+					<div class="value-block_one col-lg-3 col-md-6 col-sm-12">
+						<div class="value-block_one-inner">
+							<div class="value-block_one-icon">
+								<i class="fa-solid fa-briefcase-medical"></i>
+							</div>
+							<h5 class="value-block_one-title">Health Benefits</h5>
+							<div class="value-block_one-text">Comprehensive health insurance coverage for you and your family members.</div>
+						</div>
+					</div>
+
+					<!-- Value Block Three -->
+					<div class="value-block_one col-lg-3 col-md-6 col-sm-12">
+						<div class="value-block_one-inner">
+							<div class="value-block_one-icon">
+								<i class="fa-solid fa-laptop-house"></i>
+							</div>
+							<h5 class="value-block_one-title">Flexible Work</h5>
+							<div class="value-block_one-text">Remote work options and flexible hours to maintain work-life balance.</div>
+						</div>
+					</div>
+
+					<!-- Value Block Four -->
+					<div class="value-block_one col-lg-3 col-md-6 col-sm-12">
+						<div class="value-block_one-inner">
+							<div class="value-block_one-icon">
+								<i class="fa-solid fa-book-open"></i>
+							</div>
+							<h5 class="value-block_one-title">Learning & Development</h5>
+							<div class="value-block_one-text">Access to training programs, certifications, and continuous skill development.</div>
 						</div>
 					</div>
 				</div>
