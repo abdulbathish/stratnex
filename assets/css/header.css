@@ -33,6 +33,8 @@
 .logo img {
     height: auto;
     width: 120px;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .logo span {
@@ -383,12 +385,30 @@
     }
 
     .logo img {
-        height: 60px;
+        height: auto;
+        width: 100px;
+        max-width: 100%;
+        object-fit: contain;
     }
 
     .mega-menu,
     .mega-menu-inner {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 90px;
+    }
+    
+    .main-header {
+        height: 70px;
+    }
+    
+    .mobile-menu {
+        top: 70px;
+        height: calc(100vh - 70px);
     }
 }
 

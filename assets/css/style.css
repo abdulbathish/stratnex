@@ -8254,5 +8254,18 @@
   height: auto;
   display: block;
   margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo img {
+    max-width: 120px;
+  }
 }
 
