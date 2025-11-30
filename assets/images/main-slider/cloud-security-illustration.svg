@@ -1,123 +1,257 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
-  <!-- Cloud & Cybersecurity - Shield with Cloud -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
   <defs>
-    <linearGradient id="cloudSecGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="secGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="cloudSecGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="secGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="cloudSecGradient3" x1="0%" y1="100%" x2="0%" y2="0%">
+    <linearGradient id="secGrad3" x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
     </linearGradient>
+    <filter id="secGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="secShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.4"/>
+    </filter>
   </defs>
   
-  <!-- Background Circles -->
-  <circle cx="250" cy="250" r="200" fill="url(#cloudSecGradient1)" opacity="0.08"/>
-  <circle cx="250" cy="250" r="150" fill="url(#cloudSecGradient1)" opacity="0.05"/>
+  <!-- Background Elements -->
+  <circle cx="300" cy="300" r="250" fill="url(#secGrad1)" opacity="0.05"/>
+  <circle cx="300" cy="300" r="200" fill="url(#secGrad1)" opacity="0.08"/>
+  <circle cx="300" cy="300" r="150" fill="url(#secGrad1)" opacity="0.1"/>
   
-  <!-- Large Cloud -->
-  <g opacity="0.9">
-    <ellipse cx="250" cy="200" rx="80" ry="45" fill="url(#cloudSecGradient3)" opacity="0.3"/>
-    <ellipse cx="200" cy="200" rx="60" ry="35" fill="url(#cloudSecGradient3)" opacity="0.3"/>
-    <ellipse cx="290" cy="200" rx="55" ry="30" fill="url(#cloudSecGradient3)" opacity="0.3"/>
-    <rect x="160" y="200" width="170" height="50" fill="url(#cloudSecGradient3)" opacity="0.3"/>
-    
-    <!-- Cloud Outline -->
-    <path d="M 160 220 Q 160 180 200 175 Q 210 150 250 155 Q 280 150 300 175 Q 340 180 340 220 L 340 240 L 160 240 Z" 
-          fill="none" stroke="url(#cloudSecGradient3)" stroke-width="3" opacity="0.6"/>
+  <!-- Scanning Grid Lines -->
+  <g opacity="0.12">
+    <line x1="50" y1="150" x2="550" y2="150" stroke="url(#secGrad1)" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="50" y1="225" x2="550" y2="225" stroke="url(#secGrad1)" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="50" y1="300" x2="550" y2="300" stroke="url(#secGrad1)" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="50" y1="375" x2="550" y2="375" stroke="url(#secGrad1)" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="50" y1="450" x2="550" y2="450" stroke="url(#secGrad1)" stroke-width="1" stroke-dasharray="4,4"/>
   </g>
   
-  <!-- Security Shield (Center) -->
-  <g>
-    <path d="M 250 230 L 190 250 L 190 310 Q 190 360 250 390 Q 310 360 310 310 L 310 250 Z" 
-          fill="url(#cloudSecGradient1)" opacity="0.8"/>
-    <path d="M 250 240 L 200 255 L 200 310 Q 200 350 250 375 Q 300 350 300 310 L 300 255 Z" 
-          fill="url(#cloudSecGradient2)" opacity="0.3"/>
+  <!-- Cloud Infrastructure (Top) -->
+  <g filter="url(#secShadow)">
+    <!-- Main Cloud Shape -->
+    <ellipse cx="300" cy="180" rx="100" ry="55" fill="url(#secGrad3)" opacity="0.4"/>
+    <ellipse cx="240" cy="180" rx="70" ry="42" fill="url(#secGrad3)" opacity="0.4"/>
+    <ellipse cx="350" cy="180" rx="65" ry="38" fill="url(#secGrad3)" opacity="0.4"/>
+    <rect x="200" y="180" width="190" height="60" fill="url(#secGrad3)" opacity="0.4"/>
+    
+    <!-- Cloud Outline -->
+    <path d="M 200 210 Q 200 160 240 155 Q 250 130 300 135 Q 340 130 360 155 Q 400 160 400 210 L 400 230 L 200 230 Z" 
+          fill="none" stroke="url(#secGrad3)" stroke-width="3" opacity="0.8"/>
+    
+    <!-- Cloud Data Icons -->
+    <g opacity="0.8">
+      <circle cx="250" cy="190" r="6" fill="#fff"/>
+      <circle cx="280" cy="195" r="5" fill="#fff"/>
+      <circle cx="310" cy="190" r="6" fill="#fff"/>
+      <circle cx="340" cy="195" r="5" fill="#fff"/>
+      <circle cx="370" cy="190" r="6" fill="#fff"/>
+    </g>
+    
+    <!-- Cloud Label -->
+    <text x="300" y="205" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" opacity="0.9">CLOUD</text>
+  </g>
+  
+  <!-- Central Security Shield -->
+  <g filter="url(#secGlow)">
+    <!-- Shield Outer Glow -->
+    <path d="M 300 260 L 220 285 L 220 370 Q 220 435 300 470 Q 380 435 380 370 L 380 285 Z" 
+          fill="url(#secGrad1)" opacity="0.2"/>
+    
+    <!-- Shield Main Body -->
+    <path d="M 300 270 L 230 292 L 230 370 Q 230 425 300 455 Q 370 425 370 370 L 370 292 Z" 
+          fill="url(#secGrad1)" opacity="0.95"/>
+    
+    <!-- Shield Inner Layer -->
+    <path d="M 300 285 L 245 302 L 245 370 Q 245 415 300 440 Q 355 415 355 370 L 355 302 Z" 
+          fill="url(#secGrad2)" opacity="0.4"/>
+    
+    <!-- Shield Highlight -->
+    <path d="M 300 285 L 260 298 L 260 360 Q 260 395 300 415 Q 310 410 310 380 L 310 295 Z" 
+          fill="#fff" opacity="0.15"/>
     
     <!-- Shield Border -->
-    <path d="M 250 230 L 190 250 L 190 310 Q 190 360 250 390 Q 310 360 310 310 L 310 250 Z" 
-          fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+    <path d="M 300 270 L 230 292 L 230 370 Q 230 425 300 455 Q 370 425 370 370 L 370 292 Z" 
+          fill="none" stroke="#fff" stroke-width="3" opacity="0.6"/>
     
-    <!-- Checkmark -->
-    <path d="M 220 300 L 240 325 L 290 270" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
-      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" repeatCount="indefinite"/>
+    <!-- Security Checkmark -->
+    <g>
+      <path d="M 260 350 L 285 380 L 345 315" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dashoffset" values="0;-200" dur="3s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Security Layers Lines -->
+    <line x1="245" y1="330" x2="355" y2="330" stroke="#fff" stroke-width="1" opacity="0.3" stroke-dasharray="4,2"/>
+    <line x1="250" y1="360" x2="350" y2="360" stroke="#fff" stroke-width="1" opacity="0.3" stroke-dasharray="4,2"/>
+    <line x1="255" y1="390" x2="345" y2="390" stroke="#fff" stroke-width="1" opacity="0.3" stroke-dasharray="4,2"/>
+  </g>
+  
+  <!-- Lock Icons (Security Points) -->
+  <g filter="url(#secShadow)">
+    <!-- Top Left Lock -->
+    <g opacity="0.85">
+      <rect x="90" y="140" width="35" height="42" rx="4" fill="url(#secGrad1)"/>
+      <rect x="97" y="153" width="21" height="29" fill="#fff" opacity="0.3"/>
+      <circle cx="107.5" cy="167" r="5" fill="#fff"/>
+      <path d="M 97 153 L 97 143 Q 97 130 107.5 130 Q 118 130 118 143 L 118 153" stroke="url(#secGrad1)" stroke-width="3" fill="none"/>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Top Right Lock -->
+    <g opacity="0.85">
+      <rect x="475" y="140" width="35" height="42" rx="4" fill="url(#secGrad1)"/>
+      <rect x="482" y="153" width="21" height="29" fill="#fff" opacity="0.3"/>
+      <circle cx="492.5" cy="167" r="5" fill="#fff"/>
+      <path d="M 482 153 L 482 143 Q 482 130 492.5 130 Q 503 130 503 143 L 503 153" stroke="url(#secGrad1)" stroke-width="3" fill="none"/>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Server Racks (Left) -->
+  <g filter="url(#secShadow)" opacity="0.8">
+    <rect x="60" y="340" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="60" y="370" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="60" y="400" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="60" y="430" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    
+    <!-- Server Indicators -->
+    <g fill="#fff">
+      <circle cx="75" cy="351" r="4"/>
+      <circle cx="75" cy="381" r="4"/>
+      <circle cx="75" cy="411" r="4"/>
+      <circle cx="75" cy="441" r="4"/>
+    </g>
+    
+    <!-- Server Activity Lights -->
+    <g>
+      <circle cx="90" cy="351" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="90" cy="381" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="90" cy="411" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="90" cy="441" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Server Connection Lines -->
+    <line x1="110" y1="351" x2="125" y2="351" stroke="url(#secGrad3)" stroke-width="2"/>
+    <line x1="110" y1="381" x2="125" y2="381" stroke="url(#secGrad3)" stroke-width="2"/>
+    <line x1="110" y1="411" x2="125" y2="411" stroke="url(#secGrad3)" stroke-width="2"/>
+    <line x1="110" y1="441" x2="125" y2="441" stroke="url(#secGrad3)" stroke-width="2"/>
+  </g>
+  
+  <!-- Server Racks (Right) -->
+  <g filter="url(#secShadow)" opacity="0.8">
+    <rect x="460" y="340" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="460" y="370" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="460" y="400" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    <rect x="460" y="430" width="80" height="22" rx="4" fill="url(#secGrad3)"/>
+    
+    <!-- Server Indicators -->
+    <g fill="#fff">
+      <circle cx="475" cy="351" r="4"/>
+      <circle cx="475" cy="381" r="4"/>
+      <circle cx="475" cy="411" r="4"/>
+      <circle cx="475" cy="441" r="4"/>
+    </g>
+    
+    <!-- Server Activity Lights -->
+    <g>
+      <circle cx="490" cy="351" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="490" cy="381" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="490" cy="411" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="490" cy="441" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Firewall Bars (Left) -->
+  <g opacity="0.5">
+    <rect x="170" y="270" width="40" height="150" fill="url(#secGrad2)" opacity="0.15" rx="4"/>
+    <line x1="177" y1="285" x2="203" y2="285" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="305" x2="203" y2="305" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="325" x2="203" y2="325" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="345" x2="203" y2="345" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="365" x2="203" y2="365" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="385" x2="203" y2="385" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="177" y1="405" x2="203" y2="405" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Firewall Bars (Right) -->
+  <g opacity="0.5">
+    <rect x="390" y="270" width="40" height="150" fill="url(#secGrad2)" opacity="0.15" rx="4"/>
+    <line x1="397" y1="285" x2="423" y2="285" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="305" x2="423" y2="305" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="325" x2="423" y2="325" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="345" x2="423" y2="345" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="365" x2="423" y2="365" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="385" x2="423" y2="385" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="397" y1="405" x2="423" y2="405" stroke="url(#secGrad2)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Connection Lines with Animation -->
+  <g opacity="0.5">
+    <!-- Cloud to Shield -->
+    <path d="M 270 230 Q 240 250 240 280" stroke="url(#secGrad1)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 330 230 Q 360 250 360 280" stroke="url(#secGrad1)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Servers to Shield -->
+    <path d="M 140 380 Q 190 360 220 350" stroke="url(#secGrad3)" stroke-width="2.5" fill="none" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 460 380 Q 410 360 380 350" stroke="url(#secGrad3)" stroke-width="2.5" fill="none" stroke-dasharray="6,3">
+      <animate attributeName="stroke-dashoffset" values="0;-9" dur="1.5s" repeatCount="indefinite"/>
     </path>
   </g>
   
-  <!-- Lock Icons Around -->
-  <g opacity="0.7">
-    <rect x="100" y="160" width="25" height="30" rx="3" fill="url(#cloudSecGradient1)"/>
-    <rect x="107" y="170" width="11" height="20" fill="white" opacity="0.3"/>
-    <path d="M 107 170 L 107 160 Q 107 150 112.5 150 Q 118 150 118 160 L 118 170" stroke="url(#cloudSecGradient1)" stroke-width="2" fill="none"/>
-    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
-  </g>
-  
-  <g opacity="0.7">
-    <rect x="375" y="160" width="25" height="30" rx="3" fill="url(#cloudSecGradient1)"/>
-    <rect x="382" y="170" width="11" height="20" fill="white" opacity="0.3"/>
-    <path d="M 382 170 L 382 160 Q 382 150 387.5 150 Q 393 150 393 160 L 393 170" stroke="url(#cloudSecGradient1)" stroke-width="2" fill="none"/>
-    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" begin="1s" repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Server Icons -->
-  <g opacity="0.6">
-    <rect x="80" y="300" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <rect x="80" y="320" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <rect x="80" y="340" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <circle cx="90" cy="307.5" r="3" fill="white"/>
-    <circle cx="90" cy="327.5" r="3" fill="white"/>
-    <circle cx="90" cy="347.5" r="3" fill="white"/>
-    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite"/>
-  </g>
-  
-  <g opacity="0.6">
-    <rect x="360" y="300" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <rect x="360" y="320" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <rect x="360" y="340" width="60" height="15" rx="3" fill="url(#cloudSecGradient3)"/>
-    <circle cx="370" cy="307.5" r="3" fill="white"/>
-    <circle cx="370" cy="327.5" r="3" fill="white"/>
-    <circle cx="370" cy="347.5" r="3" fill="white"/>
-    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Connection Lines from Cloud to Shield -->
-  <path d="M 220 230 Q 180 250 150 300" stroke="url(#cloudSecGradient1)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
-    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
-  </path>
-  <path d="M 280 230 Q 320 250 360 300" stroke="url(#cloudSecGradient1)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
-    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
-  </path>
-  
-  <!-- Firewall Icons (Left and Right) -->
-  <g opacity="0.5">
-    <rect x="150" y="250" width="30" height="100" fill="url(#cloudSecGradient2)" opacity="0.2"/>
-    <line x1="155" y1="260" x2="175" y2="260" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="155" y1="275" x2="175" y2="275" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="155" y1="290" x2="175" y2="290" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="155" y1="305" x2="175" y2="305" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="155" y1="320" x2="175" y2="320" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="155" y1="335" x2="175" y2="335" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-  </g>
-  
-  <g opacity="0.5">
-    <rect x="320" y="250" width="30" height="100" fill="url(#cloudSecGradient2)" opacity="0.2"/>
-    <line x1="325" y1="260" x2="345" y2="260" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="325" y1="275" x2="345" y2="275" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="325" y1="290" x2="345" y2="290" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="325" y1="305" x2="345" y2="305" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="325" y1="320" x2="345" y2="320" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-    <line x1="325" y1="335" x2="345" y2="335" stroke="url(#cloudSecGradient2)" stroke-width="2"/>
-  </g>
-  
-  <!-- Scanning Effect -->
-  <rect x="180" y="240" width="140" height="2" fill="url(#cloudSecGradient3)" opacity="0.8">
-    <animate attributeName="y" values="240;380;240" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/>
+  <!-- Scanning Beam Effect -->
+  <rect x="50" y="260" width="500" height="3" fill="url(#secGrad3)" opacity="0.7">
+    <animate attributeName="y" values="260;440;260" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite"/>
   </rect>
+  
+  <!-- Security Particles -->
+  <g filter="url(#secGlow)">
+    <circle r="4" fill="#fff">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M 270 230 Q 240 250 240 280"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#fff">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M 330 230 Q 360 250 360 280"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#fff">
+      <animateMotion dur="3.5s" repeatCount="indefinite" path="M 140 380 Q 190 360 220 350"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 </svg>
-
