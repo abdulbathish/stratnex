@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <!-- Government Services - Government Building with Digital Elements -->
+  <defs>
+    <linearGradient id="govGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="govGradient2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="250" cy="280" r="180" fill="url(#govGradient1)" opacity="0.08"/>
+  
+  <!-- Government Building Base -->
+  <rect x="120" y="300" width="260" height="140" fill="url(#govGradient1)" opacity="0.3"/>
+  
+  <!-- Columns -->
+  <rect x="140" y="280" width="30" height="160" fill="url(#govGradient1)" opacity="0.7" rx="5"/>
+  <rect x="195" y="280" width="30" height="160" fill="url(#govGradient1)" opacity="0.7" rx="5"/>
+  <rect x="250" y="280" width="30" height="160" fill="url(#govGradient1)" opacity="0.7" rx="5"/>
+  <rect x="305" y="280" width="30" height="160" fill="url(#govGradient1)" opacity="0.7" rx="5"/>
+  
+  <!-- Roof/Pediment -->
+  <polygon points="100,280 250,200 400,280" fill="url(#govGradient1)" opacity="0.8"/>
+  <polygon points="110,280 250,210 390,280" fill="url(#govGradient2)" opacity="0.3"/>
+  
+  <!-- Dome/Capitol -->
+  <ellipse cx="250" cy="200" rx="40" ry="25" fill="url(#govGradient1)" opacity="0.7"/>
+  <rect x="240" y="180" width="20" height="40" fill="url(#govGradient1)" opacity="0.7"/>
+  <circle cx="250" cy="170" r="15" fill="url(#govGradient2)"/>
+  
+  <!-- Digital Elements - Floating Icons -->
+  <!-- Document Icon -->
+  <g opacity="0.8">
+    <rect x="80" y="180" width="50" height="60" fill="white" stroke="url(#govGradient1)" stroke-width="2" rx="3"/>
+    <line x1="90" y1="195" x2="120" y2="195" stroke="url(#govGradient1)" stroke-width="2"/>
+    <line x1="90" y1="210" x2="120" y2="210" stroke="url(#govGradient1)" stroke-width="2"/>
+    <line x1="90" y1="225" x2="110" y2="225" stroke="url(#govGradient1)" stroke-width="2"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- User/Citizen Icon -->
+  <g opacity="0.8">
+    <circle cx="400" cy="200" r="15" fill="white" stroke="url(#govGradient2)" stroke-width="2"/>
+    <path d="M 400 215 Q 385 230 385 245 L 415 245 Q 415 230 400 215" fill="white" stroke="url(#govGradient2)" stroke-width="2"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Cloud Icon -->
+  <g opacity="0.8">
+    <ellipse cx="390" cy="330" rx="25" ry="15" fill="white" stroke="url(#govGradient1)" stroke-width="2"/>
+    <ellipse cx="370" cy="330" rx="20" ry="12" fill="white" stroke="url(#govGradient1)" stroke-width="2"/>
+    <ellipse cx="405" cy="330" rx="15" ry="10" fill="white" stroke="url(#govGradient1)" stroke-width="2"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Shield/Security Icon -->
+  <g opacity="0.8">
+    <path d="M 90 320 L 90 350 Q 90 365 105 370 Q 120 365 120 350 L 120 320 Z" fill="white" stroke="url(#govGradient2)" stroke-width="2"/>
+    <path d="M 95 335 L 100 342 L 115 327" stroke="url(#govGradient2)" stroke-width="2" fill="none"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Digital Connection Lines -->
+  <path d="M 105 210 Q 150 250 240 220" stroke="url(#govGradient1)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 400 215 Q 350 240 260 220" stroke="url(#govGradient2)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 105 335 Q 180 320 240 310" stroke="url(#govGradient2)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 380 335 Q 320 320 260 310" stroke="url(#govGradient1)" stroke-width="2" stroke-dasharray="5,5" opacity="0.4">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Data Particles -->
+  <circle cx="200" cy="240" r="4" fill="#667eea">
+    <animate attributeName="cy" values="240;250;240" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="240" r="4" fill="#4facfe">
+    <animate attributeName="cy" values="240;230;240" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="260" r="4" fill="#764ba2">
+    <animate attributeName="cx" values="250;260;250" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Steps -->
+  <rect x="100" y="440" width="300" height="8" fill="url(#govGradient1)" opacity="0.5"/>
+  <rect x="110" y="448" width="280" height="8" fill="url(#govGradient1)" opacity="0.4"/>
+  <rect x="120" y="456" width="260" height="8" fill="url(#govGradient1)" opacity="0.3"/>
+</svg>
+

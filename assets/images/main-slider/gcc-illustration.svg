@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <!-- Global Capability Centre - World Map with Connected Hubs -->
+  <defs>
+    <linearGradient id="gccGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gccGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Globe -->
+  <circle cx="250" cy="250" r="180" fill="url(#gccGradient1)" opacity="0.1"/>
+  <circle cx="250" cy="250" r="180" fill="none" stroke="url(#gccGradient1)" stroke-width="2" stroke-dasharray="10,5" opacity="0.3"/>
+  
+  <!-- Latitude Lines -->
+  <ellipse cx="250" cy="250" rx="180" ry="60" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="250" cy="250" rx="180" ry="100" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="250" cy="250" rx="180" ry="140" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Longitude Lines -->
+  <line x1="250" y1="70" x2="250" y2="430" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="250" cy="250" rx="40" ry="180" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="250" cy="250" rx="90" ry="180" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="250" cy="250" rx="140" ry="180" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Hub Locations (Global Centers) -->
+  <!-- North America -->
+  <circle cx="150" cy="180" r="20" fill="url(#gccGradient2)" opacity="0.8"/>
+  <circle cx="150" cy="180" r="25" fill="none" stroke="url(#gccGradient2)" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="25;35;25" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Europe -->
+  <circle cx="280" cy="160" r="20" fill="url(#gccGradient2)" opacity="0.8"/>
+  <circle cx="280" cy="160" r="25" fill="none" stroke="url(#gccGradient2)" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="25;35;25" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Asia -->
+  <circle cx="360" cy="220" r="20" fill="url(#gccGradient2)" opacity="0.8"/>
+  <circle cx="360" cy="220" r="25" fill="none" stroke="url(#gccGradient2)" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="25;35;25" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- India (Bangalore Focus) -->
+  <circle cx="330" cy="280" r="25" fill="url(#gccGradient1)" opacity="0.9"/>
+  <circle cx="330" cy="280" r="30" fill="none" stroke="url(#gccGradient1)" stroke-width="3" opacity="0.5">
+    <animate attributeName="r" values="30;40;30" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="330" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">GCC</text>
+  
+  <!-- Australia -->
+  <circle cx="380" cy="350" r="18" fill="url(#gccGradient2)" opacity="0.8"/>
+  <circle cx="380" cy="350" r="23" fill="none" stroke="url(#gccGradient2)" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="23;33;23" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- South America -->
+  <circle cx="180" cy="340" r="18" fill="url(#gccGradient2)" opacity="0.8"/>
+  <circle cx="180" cy="340" r="23" fill="none" stroke="url(#gccGradient2)" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="23;33;23" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Connection Lines -->
+  <path d="M 150 180 Q 200 200 280 160" stroke="url(#gccGradient1)" stroke-width="2" opacity="0.3" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 280 160 Q 320 190 360 220" stroke="url(#gccGradient1)" stroke-width="2" opacity="0.3" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 360 220 Q 345 250 330 280" stroke="url(#gccGradient1)" stroke-width="3" opacity="0.4" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 330 280 Q 355 315 380 350" stroke="url(#gccGradient1)" stroke-width="2" opacity="0.3" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 150 180 Q 165 260 180 340" stroke="url(#gccGradient1)" stroke-width="2" opacity="0.3" stroke-dasharray="5,5">
+    <animate attributeName="stroke-dashoffset" values="0;-10" dur="1s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Data Flow Particles -->
+  <circle cx="150" cy="180" r="3" fill="#ffffff">
+    <animateMotion path="M 0 0 Q 50 20 130 -20" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="160" r="3" fill="#ffffff">
+    <animateMotion path="M 0 0 Q 40 30 80 60" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
