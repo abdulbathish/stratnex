@@ -265,11 +265,36 @@
             <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
     `;
+    
+    // Add inline styles as fallback
+    mobileMenuBtn.style.cssText = `
+        display: none;
+        background: none;
+        border: none;
+        padding: 12px;
+        cursor: pointer;
+        color: #fff;
+        position: relative;
+        z-index: 1002;
+        outline: none;
+    `;
+    
     headerContainer.appendChild(mobileMenuBtn);
 
     // Create mobile menu
     const mobileMenu = document.createElement('div');
     mobileMenu.className = 'mobile-menu';
+    mobileMenu.style.cssText = `
+        display: none;
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 90px);
+        background: var(--color-four);
+        overflow-y: auto;
+        z-index: 999;
+    `;
     document.body.appendChild(mobileMenu);
 
     // Generate mobile menu content
@@ -409,6 +434,12 @@
         // Handle other dropdown menus
         else if (hasDropdown) {
             const dropdownContent = item.querySelector('.mega-menu');
+            
+            if (!dropdownContent) {
+                console.warn('Dropdown content not found for item:', link.textContent.trim());
+                return;
+            }
+            
             const menuGrid = dropdownContent.querySelector('.menu-grid');
             
             if (menuGrid) {
@@ -464,32 +495,44 @@
 
     mobileMenu.appendChild(mobileNavList);
 
-    // Toggle mobile menu with better event handling
-    mobileMenuBtn.addEventListener('click', (e) => {
-        console.log('Mobile menu button clicked');
+    // Simple toggle function
+    function toggleMobileMenu() {
+        const isActive = mobileMenu.classList.contains('active');
+        
+        if (isActive) {
+            mobileMenu.classList.remove('active');
+            mobileMenu.style.display = 'none';
+            document.body.style.overflow = '';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        } else {
+            mobileMenu.classList.add('active');
+            mobileMenu.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    // Add click event with multiple methods for compatibility
+    mobileMenuBtn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        const isActive = mobileMenu.classList.toggle('active');
-        console.log('Menu active:', isActive);
-        document.body.style.overflow = isActive ? 'hidden' : '';
-        
-        // Update button aria label
-        mobileMenuBtn.setAttribute('aria-label', isActive ? 'Close menu' : 'Open menu');
-        mobileMenuBtn.setAttribute('aria-expanded', isActive);
+        toggleMobileMenu();
     });
+    
+    // Also try touchstart for mobile
+    mobileMenuBtn.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        toggleMobileMenu();
+    }, { passive: false });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (mobileMenu.classList.contains('active') && 
             !mobileMenu.contains(e.target) && 
             !mobileMenuBtn.contains(e.target)) {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            toggleMobileMenu();
         }
     });
-    
-    console.log('Mobile menu initialized successfully');
 
     // Fix "Who we are" menu loading
     document.querySelectorAll('.menu-item').forEach(item => {
