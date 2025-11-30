@@ -1063,8 +1063,11 @@ img{
 
 .sec-title.style-four .sec-title_title{
 	padding: 0px 0px;
-	color: #60A5FA;
-	text-transform: uppercase;
+    color: #60A5FA;
+    text-transform: uppercase;
+    text-align: center !important;
+    width: 100%;
+    display: block;
 }
 
 .sec-title.style-four .sec-title_heading span{

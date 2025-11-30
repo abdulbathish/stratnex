@@ -243,3 +243,15 @@
 	position: relative;
 	gap: 20px;
 }
+
+.footer-title a {
+    color: #ffffff !important;   /* White color */
+    text-decoration: none;       /* Optional: remove underline */
+}
+
+.footer-title a:hover {
+    color: #d3d3d3 !important;   /* Light grey on hover */
+}
+
+
+
