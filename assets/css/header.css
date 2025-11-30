@@ -25,6 +25,11 @@
 }
 
 /* Logo */
+.logo {
+    position: relative;
+    z-index: 10;
+}
+
 .logo a {
     display: flex;
     align-items: center;
@@ -276,19 +281,26 @@
     display: none;
     background: none;
     border: none;
-    padding: 8px;
+    padding: 12px;
     cursor: pointer;
     color: #fff;
     position: relative;
-    z-index: 1001;
+    z-index: 1002;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    outline: none;
+}
+
+.mobile-menu-btn:active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .mobile-menu-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     pointer-events: none;
+    display: block;
 }
 
 /* Mobile menu container */

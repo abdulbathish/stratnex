@@ -249,6 +249,12 @@
 	 document.addEventListener('DOMContentLoaded', function() {
     // Add mobile menu button to header
     const headerContainer = document.querySelector('.header-container');
+    
+    if (!headerContainer) {
+        console.error('Header container not found');
+        return;
+    }
+    
     const mobileMenuBtn = document.createElement('button');
     mobileMenuBtn.className = 'mobile-menu-btn';
     mobileMenuBtn.setAttribute('aria-label', 'Open menu');
@@ -268,6 +274,12 @@
 
     // Generate mobile menu content
     const navList = document.querySelector('.nav-list');
+    
+    if (!navList) {
+        console.error('Nav list not found');
+        return;
+    }
+    
     const mobileNavList = document.createElement('ul');
     mobileNavList.className = 'mobile-nav-list';
 
@@ -454,15 +466,16 @@
 
     // Toggle mobile menu with better event handling
     mobileMenuBtn.addEventListener('click', (e) => {
+        console.log('Mobile menu button clicked');
         e.preventDefault();
         e.stopPropagation();
-        mobileMenu.classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        const isActive = mobileMenu.classList.toggle('active');
+        console.log('Menu active:', isActive);
+        document.body.style.overflow = isActive ? 'hidden' : '';
         
         // Update button aria label
-        const isOpen = mobileMenu.classList.contains('active');
-        mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        mobileMenuBtn.setAttribute('aria-label', isActive ? 'Close menu' : 'Open menu');
+        mobileMenuBtn.setAttribute('aria-expanded', isActive);
     });
 
     // Close menu when clicking outside
@@ -475,6 +488,8 @@
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
         }
     });
+    
+    console.log('Mobile menu initialized successfully');
 
     // Fix "Who we are" menu loading
     document.querySelectorAll('.menu-item').forEach(item => {
