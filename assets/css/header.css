@@ -20,6 +20,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 1001;
 }
 
 /* Logo */
@@ -277,11 +279,16 @@
     padding: 8px;
     cursor: pointer;
     color: #fff;
+    position: relative;
+    z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .mobile-menu-btn svg {
     width: 24px;
     height: 24px;
+    pointer-events: none;
 }
 
 /* Mobile menu container */
@@ -295,10 +302,23 @@
     background: var(--color-four);
     overflow-y: auto;
     z-index: 999;
+    -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.active {
     display: block;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Mobile navigation styles */
@@ -344,6 +364,15 @@
     text-decoration: none;
     font-size: 16px;
     padding: 8px 8px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.mobile-menu-grid a:hover,
+.mobile-menu-grid a:active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
 }
 
 /* Nested sub-list for "What we do" */
@@ -372,7 +401,12 @@
 
 @media (max-width: 768px) {
     .mobile-menu-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        margin-left: 16px;
     }
 
     .main-nav,

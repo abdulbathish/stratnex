@@ -251,6 +251,9 @@
     const headerContainer = document.querySelector('.header-container');
     const mobileMenuBtn = document.createElement('button');
     mobileMenuBtn.className = 'mobile-menu-btn';
+    mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.setAttribute('type', 'button');
     mobileMenuBtn.innerHTML = `
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -449,10 +452,28 @@
 
     mobileMenu.appendChild(mobileNavList);
 
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', () => {
+    // Toggle mobile menu with better event handling
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         mobileMenu.classList.toggle('active');
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        
+        // Update button aria label
+        const isOpen = mobileMenu.classList.contains('active');
+        mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(e.target) && 
+            !mobileMenuBtn.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
     });
 
     // Fix "Who we are" menu loading
