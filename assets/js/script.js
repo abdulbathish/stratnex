@@ -312,11 +312,13 @@
         mobileMenu.style.cssText = `
             display: none;
             position: fixed;
-            top: 90px;
+            top: 64px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 90px);
-            background: var(--color-four);
+            height: calc(100vh - 64px);
+            background: rgba(26, 31, 54, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             overflow-y: auto;
             z-index: 999;
         `;

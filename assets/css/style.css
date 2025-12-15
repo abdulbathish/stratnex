@@ -8250,22 +8250,22 @@
 }
 
 .footer-logo img {
-  max-width: 180px;
+  max-width: 100px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0;
   object-fit: contain;
 }
 
 @media (max-width: 768px) {
   .footer-logo img {
-    max-width: 140px;
+    max-width: 90px;
   }
 }
 
 @media (max-width: 480px) {
   .footer-logo img {
-    max-width: 120px;
+    max-width: 80px;
   }
 }
 

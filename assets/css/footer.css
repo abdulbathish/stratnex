@@ -26,7 +26,7 @@
 
 .main-footer .widgets-section{
 	position: relative;
-	padding: 50px 0px 70px;
+	padding: 40px 0px 50px;
 }
 
 .main-footer .footer-upper-box{
@@ -51,10 +51,11 @@
 .footer-title{
 	position: relative;
 	font-weight: 600;
-	font-size: 20px;
-	margin-bottom: 15px;
+	font-size: 16px;
+	margin-bottom: 12px;
 	text-transform: capitalize;
 	color: var(--white-color);
+	letter-spacing: 0.3px;
 }
 
 .footer-newsletter_text{
@@ -121,40 +122,49 @@
 
 .footer-pages_list li{
 	position: relative;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .footer-pages_list li a{
 	position: relative;
-	font-weight: 500;
-	font-size: 16px;
-	color: var(--color-three);
+	font-weight: 400;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+	transition: color 0.2s ease;
 }
 
 .footer-pages_list li a:hover{
-	color: var(--color-four);
+	color: #fff;
 }
 
 .footer-lists_outer{
 	position: relative;
-	padding-left: 40px;
+	padding-left: 0;
 }
 
 .footer-lists_outer .column:last-child{
 	position: relative;
-	left: 40px;
+	left: 0;
 }
 
 .main-footer .footer-bottom{
 	position: relative;
-	padding: 30px 0px;
+	padding: 16px 0px;
 	background-color: var(--color-seven);
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo img {
+	height: auto;
+	width: 100px;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 .footer-copyright{
 	position: relative;
-	font-size: 17px;
-	color: var(--white-color);
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-copyright a{
@@ -168,16 +178,17 @@
 
 .footer-social_box a{
 	position: relative;
-	width: 40px;
-	height: 40px;
-	font-size: 14px;
-	line-height: 38px;
-	margin-left: 6px;
+	width: 36px;
+	height: 36px;
+	font-size: 13px;
+	line-height: 34px;
+	margin-left: 8px;
 	border-radius: 50px;
 	text-align: center;
 	display: inline-block;
-	color: var(--white-color);
-	border: 1px solid rgba(var(--white-color-rgb), 0.07);
+	color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.2s ease;
 }
 
 .footer-social_box span{
@@ -191,6 +202,8 @@
 .footer-social_box a:hover{
 	border-color: var(--main-color);
 	background-color: var(--main-color);
+	color: #fff;
+	transform: translateY(-2px);
 }
 
 .main-footer .footer-newsletter h5{
