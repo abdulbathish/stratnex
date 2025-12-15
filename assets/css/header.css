@@ -90,18 +90,34 @@
 /* Mega Menu */
 .mega-menu {
     position: fixed;
-    top: 90px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: var(--color-four);
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s ease;
+    z-index: 999;
+    pointer-events: none;
+    padding-top: 20px;
 }
 
-.has-dropdown:hover .mega-menu {
+.mega-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    pointer-events: auto;
+}
+
+.has-dropdown:hover .mega-menu,
+.mega-menu:hover {
     visibility: visible;
     opacity: 1;
+    pointer-events: auto;
 }
 
 .mega-menu-inner {
@@ -110,6 +126,8 @@
     padding: 40px 24px;
     display: flex;
     gap: 64px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Left Menu */
@@ -419,6 +437,13 @@
         min-width: 48px;
         min-height: 48px;
         margin-left: auto;
+    }
+    
+    /* Hide any old template hamburger menus */
+    .navbar-toggler,
+    .mobile-nav-toggler,
+    .main-header .main-menu .navbar-header .navbar-toggler {
+        display: none !important;
     }
 
     .main-nav,

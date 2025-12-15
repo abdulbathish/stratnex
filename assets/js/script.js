@@ -246,7 +246,29 @@
 
 
 
-	 document.addEventListener('DOMContentLoaded', function() {
+	// Wait for components to load before initializing
+	function initAfterComponents() {
+		// Check if header container exists (component loaded)
+		const headerContainer = document.querySelector('.header-container');
+		
+		if (!headerContainer) {
+			// Wait for componentsLoaded event or poll
+			document.addEventListener('componentsLoaded', initScript, { once: true });
+			// Also poll as fallback
+			setTimeout(initAfterComponents, 100);
+			return;
+		}
+		
+		// Header is loaded, proceed with initialization
+		initScript();
+	}
+	
+	function initScript() {
+    // Check if already initialized to prevent duplicates
+    if (document.querySelector('.mobile-menu-btn')) {
+        return; // Already initialized
+    }
+    
     // Add mobile menu button to header
     const headerContainer = document.querySelector('.header-container');
     
@@ -281,21 +303,25 @@
     
     headerContainer.appendChild(mobileMenuBtn);
 
-    // Create mobile menu
-    const mobileMenu = document.createElement('div');
-    mobileMenu.className = 'mobile-menu';
-    mobileMenu.style.cssText = `
-        display: none;
-        position: fixed;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 90px);
-        background: var(--color-four);
-        overflow-y: auto;
-        z-index: 999;
-    `;
-    document.body.appendChild(mobileMenu);
+    // Check if mobile menu already exists
+    let mobileMenu = document.querySelector('.mobile-menu');
+    if (!mobileMenu) {
+        // Create mobile menu
+        mobileMenu = document.createElement('div');
+        mobileMenu.className = 'mobile-menu';
+        mobileMenu.style.cssText = `
+            display: none;
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 90px);
+            background: var(--color-four);
+            overflow-y: auto;
+            z-index: 999;
+        `;
+        document.body.appendChild(mobileMenu);
+    }
 
     // Generate mobile menu content
     const navList = document.querySelector('.nav-list');
@@ -549,7 +575,7 @@
             this.classList.add('active');
         });
     });
-});
+	}
 
 
 
@@ -1435,8 +1461,19 @@
    When document is loading, do
    ========================================================================== */
 	
+	// Preloader is now handled by components-loader.js after header component loads
+	// Keep this as fallback for pages without components
 	$(window).on('load', function() {
-		handlePreloader();
+		// Only handle preloader if it exists and hasn't been handled yet
+		const loaderWrap = $('.loader-wrap');
+		if (loaderWrap.length && loaderWrap.is(':visible')) {
+			handlePreloader();
+		}
 	});	
+	
+	// Initialize after components are loaded (wait for jQuery to be ready)
+	$(document).ready(function() {
+		initAfterComponents();
+	});
 
 })(window.jQuery);

@@ -1,0 +1,264 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <linearGradient id="cloudGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cloudGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cloudGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cloudGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="cloudShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Elements -->
+  <circle cx="300" cy="300" r="250" fill="url(#cloudGrad1)" opacity="0.05"/>
+  <circle cx="300" cy="300" r="200" fill="url(#cloudGrad1)" opacity="0.08"/>
+  <circle cx="300" cy="300" r="150" fill="url(#cloudGrad1)" opacity="0.1"/>
+  
+  <!-- Grid Pattern Background -->
+  <g opacity="0.15">
+    <line x1="100" y1="150" x2="500" y2="150" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="100" y1="250" x2="500" y2="250" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="100" y1="350" x2="500" y2="350" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="100" y1="450" x2="500" y2="450" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="150" y1="100" x2="150" y2="500" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="250" y1="100" x2="250" y2="500" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="350" y1="100" x2="350" y2="500" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="450" y1="100" x2="450" y2="500" stroke="url(#cloudGrad1)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  </g>
+  
+  <!-- Cloud Infrastructure (Top Section) -->
+  <g filter="url(#cloudShadow)">
+    <!-- Main Cloud Shape -->
+    <ellipse cx="300" cy="150" rx="120" ry="65" fill="url(#cloudGrad2)" opacity="0.4"/>
+    <ellipse cx="240" cy="150" rx="85" ry="50" fill="url(#cloudGrad2)" opacity="0.4"/>
+    <ellipse cx="360" cy="150" rx="75" ry="45" fill="url(#cloudGrad2)" opacity="0.4"/>
+    <rect x="200" y="150" width="200" height="70" fill="url(#cloudGrad2)" opacity="0.4"/>
+    
+    <!-- Cloud Outline -->
+    <path d="M 200 220 Q 200 160 250 150 Q 280 120 300 130 Q 320 120 350 150 Q 400 160 400 220 L 400 240 L 200 240 Z" 
+          fill="none" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.8"/>
+    
+    <!-- Cloud Data Nodes -->
+    <g filter="url(#cloudGlow)">
+      <circle cx="250" cy="160" r="8" fill="#fff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="280" cy="165" r="7" fill="#fff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="300" cy="160" r="8" fill="#fff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="330" cy="165" r="7" fill="#fff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="360" cy="160" r="8" fill="#fff" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Cloud Label -->
+    <text x="300" y="195" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold" opacity="0.9">CLOUD</text>
+  </g>
+  
+  <!-- On-Premises Data Center (Bottom Section) -->
+  <g filter="url(#cloudShadow)">
+    <!-- Data Center Building -->
+    <rect x="180" y="380" width="240" height="120" fill="url(#cloudGrad1)" opacity="0.5" rx="6"/>
+    <rect x="190" y="390" width="220" height="110" fill="#1a1a2e" opacity="0.3" rx="4"/>
+    
+    <!-- Server Racks -->
+    <g opacity="0.8">
+      <!-- Left Rack -->
+      <rect x="210" y="410" width="50" height="80" fill="url(#cloudGrad1)" opacity="0.6" rx="3"/>
+      <rect x="215" y="420" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="215" y="440" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="215" y="460" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="215" y="480" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      
+      <!-- Center Rack -->
+      <rect x="275" y="410" width="50" height="80" fill="url(#cloudGrad1)" opacity="0.6" rx="3"/>
+      <rect x="280" y="420" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="280" y="440" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="280" y="460" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="280" y="480" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      
+      <!-- Right Rack -->
+      <rect x="340" y="410" width="50" height="80" fill="url(#cloudGrad1)" opacity="0.6" rx="3"/>
+      <rect x="345" y="420" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="345" y="440" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="345" y="460" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+      <rect x="345" y="480" width="40" height="12" fill="url(#cloudGrad3)" opacity="0.4" rx="2"/>
+    </g>
+    
+    <!-- Activity Indicators -->
+    <g>
+      <circle cx="235" cy="426" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="300" cy="446" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="365" cy="466" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- On-Premises Label -->
+    <text x="300" y="395" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold" opacity="0.9">ON-PREMISES</text>
+  </g>
+  
+  <!-- Hybrid Bridge/Connection (Middle Section) -->
+  <g filter="url(#cloudGlow)">
+    <!-- Central Hub -->
+    <circle cx="300" cy="280" r="35" fill="url(#cloudGrad1)" opacity="0.9"/>
+    <circle cx="300" cy="280" r="28" fill="#1a1a2e" opacity="0.4"/>
+    <circle cx="300" cy="280" r="20" fill="url(#cloudGrad2)" opacity="0.6"/>
+    <circle cx="300" cy="280" r="12" fill="#fff" opacity="0.3"/>
+    
+    <!-- Hub Pulsing Ring -->
+    <circle cx="300" cy="280" r="35" fill="none" stroke="url(#cloudGrad1)" stroke-width="3" opacity="0.7">
+      <animate attributeName="r" values="35;50;35" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Hub Label -->
+    <text x="300" y="287" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold" opacity="0.9">HYBRID</text>
+  </g>
+  
+  <!-- Connection Lines with Animation -->
+  <g opacity="0.6">
+    <!-- Cloud to Hub -->
+    <path d="M 250 220 Q 250 250 280 270" stroke="url(#cloudGrad2)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 300 220 L 300 250" stroke="url(#cloudGrad2)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 350 220 Q 350 250 320 270" stroke="url(#cloudGrad2)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Hub to On-Premises -->
+    <path d="M 250 310 Q 250 340 230 370" stroke="url(#cloudGrad1)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 300 310 L 300 380" stroke="url(#cloudGrad1)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 350 310 Q 350 340 370 370" stroke="url(#cloudGrad1)" stroke-width="3" fill="none" stroke-dasharray="8,4">
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Data Flow Particles -->
+  <g filter="url(#cloudGlow)">
+    <!-- Cloud to Hub Particles -->
+    <circle r="5" fill="#fff">
+      <animateMotion dur="2.5s" repeatCount="indefinite" path="M 250 220 Q 250 250 280 270"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="#fff">
+      <animateMotion dur="2.8s" repeatCount="indefinite" path="M 300 220 L 300 250"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="#fff">
+      <animateMotion dur="2.6s" repeatCount="indefinite" path="M 350 220 Q 350 250 320 270"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Hub to On-Premises Particles -->
+    <circle r="5" fill="#fff">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M 250 310 Q 250 340 230 370"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="#fff">
+      <animateMotion dur="3.2s" repeatCount="indefinite" path="M 300 310 L 300 380"/>
+      <animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="5" fill="#fff">
+      <animateMotion dur="2.9s" repeatCount="indefinite" path="M 350 310 Q 350 340 370 370"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Side Icons - Cloud Services -->
+  <g filter="url(#cloudShadow)">
+    <!-- Left Cloud Service Icon -->
+    <g opacity="0.85">
+      <ellipse cx="100" cy="200" rx="35" ry="20" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <ellipse cx="70" cy="200" rx="28" ry="16" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <ellipse cx="125" cy="200" rx="22" ry="14" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <circle cx="100" cy="200" r="8" fill="url(#cloudGrad2)"/>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Right Cloud Service Icon -->
+    <g opacity="0.85">
+      <ellipse cx="500" cy="200" rx="35" ry="20" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <ellipse cx="470" cy="200" rx="28" ry="16" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <ellipse cx="525" cy="200" rx="22" ry="14" fill="#fff" stroke="url(#cloudGrad2)" stroke-width="3" opacity="0.95"/>
+      <circle cx="500" cy="200" r="8" fill="url(#cloudGrad2)"/>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Side Icons - On-Premises Servers -->
+  <g filter="url(#cloudShadow)">
+    <!-- Left Server Icon -->
+    <g opacity="0.85">
+      <rect x="80" y="420" width="50" height="60" fill="#fff" stroke="url(#cloudGrad1)" stroke-width="3" rx="4" opacity="0.95"/>
+      <rect x="90" y="435" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <rect x="90" y="450" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <rect x="90" y="465" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <circle cx="105" cy="440" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Right Server Icon -->
+    <g opacity="0.85">
+      <rect x="470" y="420" width="50" height="60" fill="#fff" stroke="url(#cloudGrad1)" stroke-width="3" rx="4" opacity="0.95"/>
+      <rect x="480" y="435" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <rect x="480" y="450" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <rect x="480" y="465" width="30" height="8" fill="url(#cloudGrad1)" opacity="0.4" rx="1"/>
+      <circle cx="495" cy="440" r="3" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <animate attributeName="opacity" values="0.85;0.5;0.85" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  
+  <!-- Floating Particles in Background -->
+  <g opacity="0.3">
+    <circle cx="120" cy="280" r="3" fill="url(#cloudGrad2)">
+      <animate attributeName="cy" values="280;260;280" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="320" r="3" fill="url(#cloudGrad1)">
+      <animate attributeName="cy" values="320;340;320" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="350" r="3" fill="url(#cloudGrad2)">
+      <animate attributeName="cx" values="180;200;180" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="250" r="3" fill="url(#cloudGrad1)">
+      <animate attributeName="cx" values="420;400;420" dur="5.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
+
